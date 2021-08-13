@@ -15,7 +15,7 @@ jobs:
     steps:
       - run: yum install -y python3-devel rpm-build
 
-      - run: ls -la
+      - run: cat ihashmap.spec
 
       - name: Build RPM
         id: build_rpm
