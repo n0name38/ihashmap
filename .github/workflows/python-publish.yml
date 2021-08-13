@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - run: yum install -y python3-devel
 
       - name: build RPM package
         id: rpm
         uses: naveenrajm7/rpmbuild@master
+        run: yum install -y python3-devel
         with:
           spec_file: "ihashmap.spec"
 
