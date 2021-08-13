@@ -1,12 +1,12 @@
 Name:           ihashmap
-Version:        0.1
+Version:        1.0.5
 Release:        1%{?dist}
 Summary:        Indexed hashmap wrapper in Python
 
 Group:          $REPO_GROUP
 License:        MIT
 URL:            $REPO_URL
-Source0:        $REPO_BUILD_TAR
+Source0:        %{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
