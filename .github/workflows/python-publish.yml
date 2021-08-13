@@ -13,21 +13,17 @@ jobs:
     container: centos:7
 
     steps:
-      - uses: actions/checkout@v2
+      - run: yum install -y python3-devel rpm-build
 
-
-      - name: build RPM package
-        id: rpm
-        uses: naveenrajm7/rpmbuild@master
-        run: yum install -y python3-devel
-        with:
-          spec_file: "ihashmap.spec"
+      - name: Build RPM
+        id: build_rpm
+        run: rpmbuild -ba ihashmap.spec
 
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
           name: Binary RPM
-          path: ${{ steps.rpm.outputs.rpm_dir_path }}
+          path: RPM/
 
   deploy:
     runs-on: ubuntu-latest
