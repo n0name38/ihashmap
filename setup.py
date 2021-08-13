@@ -3,11 +3,11 @@
 import setuptools
 
 module_info = {
-    "name": "smart_hashmap",
+    "name": "ihashmap",
     "version": "1.0.4",
     "description": "Wrapper for hash map based storage systems",
     "author": "Yury Sokov aka. Yurzs",
-    "author_email": "yurzs+smart_hashmap@icloud.com",
+    "author_email": "yurzs+ihashmap@icloud.com",
     "packages": setuptools.find_packages(exclude=("tests", "tests.*", "*.tests")),
     "license": "MIT",
     "keywords": ["cache", "indexes"],
