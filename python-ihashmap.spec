@@ -1,11 +1,10 @@
 %define package_version 1.0.8
-%global dist_raw %(%{__grep} -oP "release \\K[0-9]+\\.[0-9]+" /etc/system-release | tr -d ".")
 %define pkgname ihashmap
 %define buildid @BUILDID@
 
 Name:           python-%{pkgname}
 Version:        %package_version
-Release:        1.CROC1%{dist}
+Release:        1.CROC1_REDOS_TEST1%{dist}
 Summary:        Indexed hashmap wrapper in Python
 Group:          Libraries
 License:        MIT
